@@ -16,12 +16,12 @@ const Game = ({ gameData }: TProps) => {
 
     useEffect(() => {
         setScoreChanged(true);
-        setTimeout(() => setScoreChanged(false), 500)
+        setTimeout(() => setScoreChanged(false), 1000)
     }, [match_info])
 
     useEffect(() => {
         setMarketsCountChanged(true);
-        setTimeout(() => setMarketsCountChanged(false), 500)
+        setTimeout(() => setMarketsCountChanged(false), 1000)
     }, [markets_count])
 
     const handleGameClick = (e: SyntheticEvent) => {

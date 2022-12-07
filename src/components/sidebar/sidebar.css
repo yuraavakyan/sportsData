@@ -62,13 +62,12 @@
 .game {
     font-weight: 200;
     font-size: 16px;
-
-
 }
 
-.score .markets-count {
+.score,
+.markets-count {
     animation-name: update;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
