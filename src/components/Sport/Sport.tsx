@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { group, sportIcons } from '../../utils/helpers'
 import Region from '../Region/Region'
-import { TGameData, TRegionData, TSportsData } from '../sidebar/types'
+import { TGameData, TRegionData, TSportsData } from '../Sidebar/types'
 
 type TProps = {
     sportTitle: string,

@@ -4,7 +4,7 @@ import basketball from '../assets/icons/basketball.png';
 import ballSports from '../assets/icons/balls-sports.png';
 import tournament from '../assets/icons/countries.png';
 import region from '../assets/icons/trophy.png';
-import { TGameData, TRegionData, TTournamentData, TSportsData } from '../components/sidebar/types';
+import { TGameData, TRegionData, TTournamentData, TSportsData } from '../components/Sidebar/types';
 import Region from '../components/Region/Region';
 
 type TGroupObject = {

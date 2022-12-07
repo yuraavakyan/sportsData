@@ -1,6 +1,6 @@
 import { SyntheticEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { TGameData } from "../sidebar/types";
+import { TGameData } from "../Sidebar/types";
 type TProps = {
     gameData: TGameData,
 }

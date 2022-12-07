@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from "react";
 import Game from "../Game/Game";
 import tournament from '../../assets/icons/trophy.png'
-import { TGameData, TTournamentData } from "../sidebar/types";
+import { TGameData, TTournamentData } from "../Sidebar/types";
 
 type TProps = {
     tournamentTitle: string,

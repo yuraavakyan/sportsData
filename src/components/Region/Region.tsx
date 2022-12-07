@@ -2,7 +2,7 @@ import React, { SyntheticEvent, useState } from 'react'
 import { group } from '../../utils/helpers'
 import Tournament from '../Tournament/Tournament'
 import region from '../../assets/icons/countries.png';
-import { TRegionData, TSportsData, TTournamentData } from '../sidebar/types';
+import { TRegionData, TSportsData, TTournamentData } from '../Sidebar/types';
 
 type TProps = {
     regionTitle: string,
