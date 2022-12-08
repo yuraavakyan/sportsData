@@ -1,0 +1,78 @@
+.expandable-link {
+    font-weight: 800;
+    padding: 20px 5px 20px 30px;
+    border-bottom: 2px solid #e2e2e2;
+    font-size: 20px;
+}
+
+.expandable-sub-link {
+    padding: 5px 0 5px 10px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar {
+    height: 100vh;
+    max-width: 400px;
+    border-right: 1px solid #e2e2e2;
+}
+
+.group-title {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.link-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-icon {
+    width: 20px;
+}
+
+.games-count {
+    font-weight: 300;
+    border-radius: 50px;
+    background-color: #7cfc00;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes update {
+    0% {
+        background-color: rgba(96, 251, 141, 1);
+    }
+
+    50% {
+        background-color: rgba(96, 251, 141, 0.5);
+    }
+
+    100% {
+        background-color: rgba(96, 251, 141, 0);
+
+    }
+}
+
+.game {
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.score,
+.markets-count {
+    animation-name: update;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.game a {
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
