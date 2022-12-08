@@ -26,6 +26,7 @@ const Sidebar = () => {
         const updatedSportsData: TSportsData = { ...sportsData };
         const gameIndexToUpdate: number = updatedSportsData[sportKey][regionKey][tournamentKey]?.findIndex((el: TGameData) => el._id === _id)
         if (_remove) {
+            console.log('remove', data)
             updatedSportsData?.[sportKey]?.[regionKey]?.[tournamentKey].splice(gameIndexToUpdate, 1);
             if (!updatedSportsData?.[sportKey]?.[regionKey]?.[tournamentKey].length) {
                 delete updatedSportsData?.[sportKey]?.[regionKey]?.[tournamentKey];
@@ -38,6 +39,7 @@ const Sidebar = () => {
             }
         }
         if (_new) {
+            console.log('new', data)
             setSports({ ...sports, [sport.id]: sport.alias });
             setRegions({ ...regions, [region.id]: region.alias });
             setTournaments({ ...tournaments, [tournament.id]: tournament.alias });
@@ -97,13 +99,13 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
-            {sportsData.length ? ((Object.keys(sportsData)).map((el: string) => (
+            {(Object.keys(sportsData)).map((el: string) => (
                 <Sport
                     key={el}
                     sportTitle={el}
                     sportData={sportsData[el]}
                 />
-            ))) : <div>Sorry, no games found...</div>}
+            ))}
         </div>
     );
 }
