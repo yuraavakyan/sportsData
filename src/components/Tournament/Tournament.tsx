@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from "react";
 import Game from "../Game/Game";
 import tournament from '../../assets/icons/trophy.png'
-import { TGameData, TTournamentData } from "../Sidebar/types";
+import { TGameData } from "../Sidebar/types";
 
 type TProps = {
     tournamentTitle: string,
@@ -20,7 +20,6 @@ const Tournament = ({ tournamentTitle, tournamentData }: TProps) => {
             <div className="link-title">
                 <img className="link-icon" src={tournament} />
                 <div>{tournamentTitle}</div>
-                {/* <div className='games-count'>{tournamentData.length}</div> */}
             </div>
             {open && (
                 <>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { extractData, parseIntoTree } from "../../utils/helpers";
 import { dataToFetchGames, dataToSend, pingData } from "../../utils/requestData";
 import Sport from "../Sport/Sport";
@@ -26,7 +26,6 @@ const Sidebar = () => {
         const updatedSportsData: TSportsData = { ...sportsData };
         const gameIndexToUpdate: number = updatedSportsData[sportKey][regionKey][tournamentKey]?.findIndex((el: TGameData) => el._id === _id)
         if (_remove) {
-            console.log('remoooooooooooooove', data)
             updatedSportsData?.[sportKey]?.[regionKey]?.[tournamentKey].splice(gameIndexToUpdate, 1);
             if (!updatedSportsData?.[sportKey]?.[regionKey]?.[tournamentKey].length) {
                 delete updatedSportsData?.[sportKey]?.[regionKey]?.[tournamentKey];
@@ -39,7 +38,6 @@ const Sidebar = () => {
             }
         }
         if (_new) {
-            console.log('neeeeeewwwwww', data)
             setSports({ ...sports, [sport.id]: sport.alias });
             setRegions({ ...regions, [region.id]: region.alias });
             setTournaments({ ...tournaments, [tournament.id]: tournament.alias });
@@ -75,17 +73,13 @@ const Sidebar = () => {
             setSportsData(parsedData);
             setSubscribeId(sid)
         }
-        else {
-
-        }
-
     }
 
-    socket.onopen = (e) => {
+    socket.onopen = () => {
         socket.send(JSON.stringify(dataToSend));
     };
 
-    socket.onclose = (e) => {
+    socket.onclose = () => {
         clearInterval(pingpongInterval)
     }
 

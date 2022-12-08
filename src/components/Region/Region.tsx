@@ -20,7 +20,6 @@ const Region = ({ regionTitle, regionData }: TProps) => {
             <div className='link-title'>
                 <img className='link-icon' src={region} />
                 <div>{regionTitle}</div>
-                {/* <div className='games-count'>{regionData.length}</div> */}
             </div>
             {open && (
                 <>
@@ -41,7 +40,6 @@ const Region = ({ regionTitle, regionData }: TProps) => {
                 </>
             )}
         </div>
-
     )
 }
 

@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { group, sportIcons } from '../../utils/helpers'
+import { useState } from 'react'
+import { sportIcons } from '../../utils/helpers'
 import Region from '../Region/Region'
-import { TGameData, TRegionData, TSportsData } from '../Sidebar/types'
+import { TRegionData } from '../Sidebar/types'
 
 type TProps = {
     sportTitle: string,
@@ -20,7 +20,6 @@ const Sport = ({ sportTitle, sportData }: TProps) => {
             <div className='link-title'>
                 <img className='link-icon' src={sportIcons[sportTitle]} />
                 <div>{sportTitle}</div>
-                {/* <div className='games-count'>{sportData.length}</div> */}
             </div>
             {open && (
                 <>
@@ -35,10 +34,8 @@ const Sport = ({ sportTitle, sportData }: TProps) => {
                         ))}
                     </div>
                 </>
-
             )}
         </div>
-
     )
 }
 

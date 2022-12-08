@@ -1,18 +1,16 @@
 import { SyntheticEvent, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { TGameData } from "../Sidebar/types";
 type TProps = {
     gameData: TGameData,
 }
 
 const Game = ({ gameData }: TProps) => {
+    const { home, away, match_info, markets_count, _id } = gameData;
     const navigate = useNavigate()
+
     const [scoreChanged, setScoreChanged] = useState(false)
     const [marketsCountChanged, setMarketsCountChanged] = useState(false)
-
-
-
-    const { home, away, match_info, markets_count, _id } = gameData;
 
     useEffect(() => {
         setScoreChanged(true);
@@ -36,7 +34,6 @@ const Game = ({ gameData }: TProps) => {
             </div>
             <div className="group-title">markets count: <span className={marketsCountChanged ? 'markets-count' : ''}>{markets_count}</span></div>
         </div>
-
     )
 }
 
